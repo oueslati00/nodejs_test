@@ -41,7 +41,9 @@ app.put('/api/students/:id',(req, res) =>  {
     student.name= req.body.name;
     res.send(student);
 });
-
+app.get('/hello', (req, res) => {
+  res.send('hello');
+});
 //delete
 app.delete('/api/students/:id',(req,res) => {
     const student = students.find(cd => cd.id === parseInt(req.params.id));
